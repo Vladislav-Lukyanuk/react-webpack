@@ -1,11 +1,15 @@
 {
   "compilerOptions": {
-    "outDir": "./dist/",
-    "noImplicitAny": true,
-    "module": "commonjs",
+    "baseUrl": "src",
     "target": "es5",
-    "jsx": "react",
     "allowJs": true,
-    "allowSyntheticDefaultImports": true
-  }
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "module": "commonjs",
+    "jsx": "react"
+  },
+  "include": [
+    "src",
+    "./src/declaration.d.ts"
+  ]
 }

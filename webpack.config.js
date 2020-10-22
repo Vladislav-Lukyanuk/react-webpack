@@ -7,13 +7,33 @@ module.exports = {
         contentBase: path.join(__dirname, "dist"),
         port: 3001,
     },
+    devtool: 'inline-source-map',
     module: {
         rules: [
+            {
+                test: /\.bundle\.js$/,
+                use: {
+                    loader: 'bundle-loader',
+                    options: {
+                        name: '[name]'
+                    }
+                }
+            },
             {
                 test: /\.tsx?$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
+            },
+            {
+                test: /\.(svg|png|gif|jpg)$/,
+                exclude: /fonts/,
+                loader: 'file-loader'
+            },
+            {
+                test: /\.(ttf|eot|woff|svg|woff2)$/,
+                loader: "file-loader"
             }
+
         ],
     },
     resolve: {

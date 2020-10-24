@@ -24,6 +24,7 @@
   "dependencies": {
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@types/styled-components": "^5.1.4",
     "react": "^16.14.0",
     "react-dom": "^16.14.0",
     "styled-components": "^5.2.0"

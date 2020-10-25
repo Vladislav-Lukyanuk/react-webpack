@@ -11,7 +11,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.bundle\.js$/,
+                test: /\.bundle\.ts$/,
                 use: {
                     loader: 'bundle-loader',
                     options: {
